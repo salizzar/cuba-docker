@@ -1,0 +1,10 @@
+FROM	salizzar/centos-7-ruby
+
+WORKDIR	/root/ruby/src
+
+ADD	Gemfile .
+
+RUN	yum install -y libxml2-devel libxslt-devel &&	\
+	ruby -S bundle install
+
+EXPOSE	9292

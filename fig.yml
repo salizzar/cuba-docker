@@ -1,0 +1,15 @@
+redis:
+  image: 'redis:2.8.17'
+  ports:
+    - 6379
+
+web:
+  build: .
+  command: ruby -S bundle exec rackup -p 9292
+  volumes:
+    - .:/root/ruby/src
+  ports:
+    - 9292:9292
+  links:
+    - redis
+
