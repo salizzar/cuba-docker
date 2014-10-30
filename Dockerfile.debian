@@ -1,12 +1,11 @@
 FROM	salizzar/debian-7-ruby
 
-WORKDIR	/root/ruby/src
+WORKDIR	/var/www/cuba-docker
 
 ADD	Gemfile .
 
 RUN	apt-get update &&				\
 	apt-get install -y libxml2-dev libxslt-dev &&	\
-	cd /root/ruby/src &&				\
 	ruby -S bundle install
 
 EXPOSE	9292

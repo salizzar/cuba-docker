@@ -1,6 +1,6 @@
 FROM	salizzar/centos-7-ruby
 
-WORKDIR	/root/ruby/src
+WORKDIR	/var/www/cuba-docker
 
 ADD	Gemfile .
 
