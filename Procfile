@@ -1,1 +1,1 @@
-web: ruby -S bundle exec rackup -p 9292
+web: ruby -S bundle exec puma -p 9292
