@@ -1,0 +1,13 @@
+recipes:
+  - app_name:         cuba-docker
+    app_description:  A little poc using docker and cuba
+    app_homepage:     https://github.com/salizzar/cuba-docker
+    app_version:      1.0.0
+    app_type:         web
+    runtime_name:     ruby
+    runtime_version:  2.2.3
+    http_server_type: nginx
+    init_type:        systemd
+    package_type:     rpm
+    output:           pkg
+
