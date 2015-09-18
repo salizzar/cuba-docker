@@ -9,5 +9,5 @@ recipes:
     http_server_type: nginx
     init_type:        systemd
     package_type:     rpm
-    output:           pkg
+    output_dir:       pkg
 
