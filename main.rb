@@ -8,6 +8,7 @@ Cuba.define do
     on root do
       redis = Redis.new(host: ENV['REDIS_PORT_6379_TCP_ADDR'], port: ENV['REDIS_PORT_6379_TCP_PORT'])
       redis.incr('visits')
+      redis.incr('visits')
 
       res.write("Hello world! #{redis.get('visits')} visits since last execution.")
     end
